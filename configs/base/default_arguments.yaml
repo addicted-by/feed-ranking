@@ -1,0 +1,22 @@
+data_path: data/preprocessed
+benchmark_filename: ['train', 'dev', 'dev']
+
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+LABEL_FIELD: label
+
+
+load_col: 
+    inter: [user_id, item_id, label, timestamp]
+
+
+metrics: ['Precision', 'Recall', 'NDCG', 'MAP']
+topk: [1, 2, 5, 7, 10]
+eval_args:
+    split:
+        RS: [0.8, 0.1, 0.1]
+    group_by: user
+    order: TO
+    mode: full
+
+log_wandb: True
