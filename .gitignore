@@ -1,3 +1,10 @@
+data/
+saved/
+wandb/
+recbox_data/
+presentations/
+log/
+log_tensorboard/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

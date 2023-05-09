@@ -14,14 +14,16 @@ sys.path.append('../')
 def load_config(path: str,
                 default_arguments: str='configs/base/default_arguments.yaml') -> Dict:
     
+    assert os.path.exists(path), f"Bad specified path {path}"
     custom_config = load(open(path, 'r'), Loader=Loader)
     
     # Load default config
     if default_arguments:
         assert os.path.exists(default_arguments), f"Can't find base config {default_arguments}"
         default_config = load(open(default_arguments, 'r'), Loader=Loader)
-        for key, value in custom_config.items():
-            default_config[key] = value
+        if custom_config:
+            for key, value in custom_config.items():
+                default_config[key] = value
         return default_config
     gc.collect()
     return custom_config
