@@ -1,14 +1,14 @@
 train_neg_sample_args: None
-additional_feat_suffix: [newsemb]
+# additional_feat_suffix: [newsemb]
 
 load_col: 
     inter: [user_id, item_id, label, timestamp]
-    newsemb: [nid, title_emb]
+    # newsemb: [nid, title_emb]
 
-alias_of_item_id: [nid]
+# alias_of_item_id: [nid]
 
-preload_weight:
-    nid: title_emb
+# preload_weight:
+#     nid: title_emb
 train_batch_size: 1024
 eval_batch_size: 1024
 hidden_size: 64

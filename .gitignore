@@ -1,3 +1,4 @@
+models/
 data/
 saved/
 wandb/
@@ -5,6 +6,8 @@ recbox_data/
 presentations/
 log/
 log_tensorboard/
+report/*.html
+embs.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

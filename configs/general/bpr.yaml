@@ -2,6 +2,6 @@ min_user_inter_num: 5
 min_item_inter_num: 5
 
 train_neg_sample_args:
-    uniform : 1
+    uniform : 10
 
-epochs: 50
+epochs: 100

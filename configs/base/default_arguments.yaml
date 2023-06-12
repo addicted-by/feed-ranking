@@ -6,19 +6,21 @@ ITEM_ID_FIELD: item_id
 LABEL_FIELD: label
 
 
+
 load_col: 
     inter: [user_id, item_id, label, timestamp]
 
 
 metrics: ['Precision', 'Recall', 'NDCG', 'MAP']
 topk: [1, 2, 5, 7, 10]
+
 valid_metric: NDCG@10
-eval_step: 30
+eval_step: 10
 eval_args:
     split:
         RS: [0.8, 0.1, 0.1]
     group_by: user
     order: TO
-    mode: uni10
+    mode: uni50
 
 log_wandb: True
